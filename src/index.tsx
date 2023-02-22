@@ -4,13 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const testData = [
+  {
+    name: '#progress1',
+    progress: 0,
+  },
+  {
+    name: '#progress2',
+    progress: 0,
+  },
+  {
+    name: '#progress3',
+    progress: 0,
+  },
+];
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <App data={testData} />
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
